@@ -1,73 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif; /* Задано шрифт Montserrat */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #f0f0f0; /* Світло-сірий фон */
+    font-family: 'Roboto Mono', monospace;
+    background-color: #121418;
+    color: #b0b8c3;
+    padding: 20px;
+    line-height: 1.5;
 }
 
-header {
-  height: 8vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0; /* Той же світло-сірий фон */
-  width: 100%;
-  margin-bottom: 20px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #1b1e24;
+    border: 1px solid #2d333b;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
-  margin: 0;
-  font-weight: 700; /* Жирний шрифт для заголовка */
+header h1 {
+    margin-bottom: 30px;
+    color: #e6edf3;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 1px solid #2d333b;
+    padding-bottom: 15px;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+    min-height: 200px;
+    padding: 20px;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 колонки */
-  gap: 0; /* Спочатку відключаємо gap */
-  width: calc(100% - 6%); /* Врахування відступів */
-  margin: 20px 0;
-  padding: 0; /* Відключаємо внутрішні відступи */
+.gallery-item {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: all 0.3s ease;
+    border: 1px solid #30363d;
+    filter: grayscale(20%);
 }
 
-img {
-  border-radius: 10px;
-  width: 100%; /* Ширина 100% від колонки */
-  height: auto; /* Автоматична висота */
+.gallery-item:hover {
+    opacity: 1;
+    transform: scale(1.02);
+    border-color: #58a6ff;
+    filter: grayscale(0%);
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
 }
 
-.buttons {
-  display: flex;
-  flex-wrap: wrap; /* Дозволяє кнопкам переходити на новий рядок */
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  width: calc(100% - 6%); /* Врахування відступів з обох сторін */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px;
+    background-color: #161b22;
+    border-top: 1px solid #30363d;
 }
 
-button {
-  flex: 1; /* Дозволяє кнопкам займати доступний простір */
-  padding: 15px; /* Збільшено розмір кнопки */
-  border: none;
-  border-radius: 20px; /* Збільшено радіус заокруглення */
-  background-color: #e60023; /* Новий колір фону кнопок */
-  color: white;
-  cursor: pointer;
-  font-size: 16px; /* Збільшено розмір тексту на 3 пункти */
-  font-family: 'Montserrat', sans-serif; /* Шрифт кнопок Montserrat */
-  min-width: 150px; /* Мінімальна ширина кнопки */
+.btn {
+    font-family: 'Roboto Mono', monospace;
+    padding: 12px 24px;
+    background-color: transparent;
+    border: 1px solid;
+    color: #b0b8c3;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-button:hover {
-  background-color: #b3001a; /* Темніший колір при наведенні */
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    border-color: #b0b8c3;
+}
+
+.btn-primary:hover {
+    background-color: #b0b8c3;
+    color: #121418;
+    box-shadow: 0 0 10px rgba(176, 184, 195, 0.3);
+}
+
+.btn-danger {
+    border-color: #f85149;
+    color: #f85149;
+}
+
+.btn-danger:hover {
+    background-color: #f85149;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(248, 81, 73, 0.3);
+}
+
+.btn-warning {
+    border-color: #d29922;
+    color: #d29922;
+}
+
+.btn-warning:hover {
+    background-color: #d29922;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(210, 153, 34, 0.3);
+}
+
+.btn-secondary {
+    border-color: #58a6ff;
+    color: #58a6ff;
+}
+
+.btn-secondary:hover {
+    background-color: #58a6ff;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
 }

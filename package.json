@@ -1,16 +1,23 @@
 {
   "name": "js-dom2",
   "version": "1.0.0",
-  "main": "src/script.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "live-server src --port=3000"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serhii471/js-DOM2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "http-server": "^14.1.1",
-    "live-server": "^1.2.2"
+  "bugs": {
+    "url": "https://github.com/Serhii471/js-DOM2/issues"
   },
-  "description": ""
+  "homepage": "https://github.com/Serhii471/js-DOM2#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
 }
