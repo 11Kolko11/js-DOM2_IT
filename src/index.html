@@ -2,29 +2,44 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <!-- Адаптивність сторінки на мобільних пристроях -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Заголовок вкладки браузера -->
     <title>JS DOM Gallery Assignment</title>
+
+    <!-- Підключення зовнішнього файлу стилів -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
+    <!-- Основний контейнер сторінки -->
     <div class="container">
         <header>
+            <!-- Заголовок галереї -->
             <h1>/// GALERIA_V2 ///</h1>
         </header>
 
         <main>
+            <!-- Контейнер, в який JavaScript буде додавати зображення -->
             <div id="gallery" class="gallery-grid"></div>
 
+            <!-- Блок з кнопками керування галереєю -->
             <div class="controls">
+                <!-- Кнопка завантаження нової порції зображень -->
                 <button id="load-more" class="btn btn-primary">Завантажити ще</button>
+                <!-- Кнопка повного очищення галереї -->
                 <button id="clear-gallery" class="btn btn-danger">Очистити галерею</button>
+                <!-- Кнопка видалення останнього зображення -->
                 <button id="remove-last" class="btn btn-warning">Видалити останню</button>
+                <!-- Кнопка, що перевертає порядок зображень -->
                 <button id="reverse-gallery" class="btn btn-secondary">Перевернути</button>
             </div>
         </main>
     </div>
 
+    <!-- Підключення JavaScript-файлу.
+         Атрибут defer гарантує виконання скрипта після завантаження HTML -->
     <script src="script.js" defer></script>
 </body>
 </html>
